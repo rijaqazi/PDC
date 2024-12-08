@@ -1,69 +1,139 @@
-# BASICS FOLDER:
 
-CODE 1: BASIC CALCULATOR USING PYTHON
+# **Basic Python Codes**
+This repository contains basic Python programs designed to demonstrate fundamental programming concepts and advanced techniques like parallel computing, threading, multiprocessing, and GPU computing. Each file highlights specific concepts and functionalities relevant to beginner and intermediate Python programmers.
 
-CODE 2: PYTHON CODE IMPLEMENTING LIST DICTIONARY AND TUPLES
+## **Contents**
 
-CODE 3: FUNCTION TO CALCULATE SUM
+### **1. calculator.py**
+A simple calculator program that performs basic arithmetic operations (addition, subtraction, multiplication, and division). Users can input two numbers and choose the desired operation.
 
-CODE 4: USING CLASSES AND OBJECTS
+---
 
-# CHAP1
+### **2. data_structures.py**
+This file demonstrates the use of various data structures in Python, including:
 
-BANK.PY: THIS CODE USES MULTITHREADING TO PERFORM DEPOSIT AND WITHDRAWAL OPERATIONS ON A SHARED BALANCE WHILE MEASURING EXECUTION TIME.
+- **Tuples**
+- **Lists**
+- **Dictionaries**
 
-DATA_PARALLELISM.PY: THIS CODE USES A THREAD POOL TO EXECUTE TWO TASKS (TASK_1 AND TASK_2) CONCURRENTLY USING THREADPOOLEXECUTOR.
+Examples and explanations are provided to help understand how to use these data structures effectively.
 
-DO_SOMETHING.PY: THIS CODE DEFINES A FUNCTION DO_SOMETHING THAT GENERATES RANDOM NUMBERS AND ADDS THEM TO A GIVEN LIST FOR A SPECIFIED COUNT.
+---
 
-FIBONACCI.PY: THIS CODE CREATES MULTIPLE THREADS TO CALCULATE THE 35TH FIBONACCI NUMBER CONCURRENTLY AND MEASURES THE TOTAL EXECUTION TIME.
+### **3. functions.py**
+This script showcases how to define and use functions in Python. It includes examples of:
 
-HELLO.PY: THIS CODE PERFORMS DATA PARALLEL VECTOR ADDITION USING NUMPY, MEASURES THE COMPUTATION TIME, AND DISPLAYS THE FIRST 10 RESULTS.
+- **Defining functions**
+- **Function parameters and return values**
+- **Calling functions**
 
-IPC.PY: THIS CODE DEMONSTRATES INTER-PROCESS COMMUNICATION USING A QUEUE, WHERE A PRODUCER ADDS ITEMS AND A CONSUMER RETRIEVES THEM IN SEPARATE PROCESSES.
+---
 
-MPI.PY: THIS CODE USES MPI TO ENABLE COMMUNICATION BETWEEN PROCESSES, WHERE PROCESS 0 SENDS DATA TO PROCESS 1, AND OTHER PROCESSES REMAIN IDLE.
+### **4. classes.py**
+This file introduces object-oriented programming (OOP) in Python. It covers:
 
-MULITPROCESSING.PY: THIS CODE COMPARES THE PERFORMANCE OF MULTIPROCESSING AND MULTITHREADING FOR A TASK THAT GENERATES LARGE RANDOM NUMBERS AND MEASURES THEIR EXECUTION TIMES.
+- **Creating classes and objects**
+- **Defining methods**
+- **Using inheritance**
 
-PARALLELIZATION.PY: THIS CODE PERFORMS PARALLEL VECTOR ADDITION USING THREADS AND MEASURES EXECUTION TIME.
+---
 
-PROCESS_CREATION.PY: THIS CODE DEMONSTRATES MULTIPROCESSING TO CALCULATE THE SQUARE AND CUBE OF A NUMBER CONCURRENTLY.
+### **5. mpi_example.py**
+This script demonstrates how to use MPI (Message Passing Interface) for distributed computing with `mpi4py`. It shows basic communication between processes:
 
-SHARED_MEM.PY: THIS CODE DEMONSTRATES THREADING WITH A LOCK TO SAFELY MANAGE DEPOSITS AND WITHDRAWALS ON A SHARED BALANCE.
+- **Sending and receiving data using MPI**
+- **Handling process ranks and sizes**
 
-SYNCHRONIZATION.PY: THIS CODE DEMONSTRATES THE USE OF A SEMAPHORE TO CONTROL ACCESS TO A SHARED RESOURCE, ALLOWING ONLY ONE THREAD AT A TIME.
+---
 
-# CHAP2
+### **6. multiprocessing_vs_threading.py**
+This script compares multiprocessing and threading for concurrent programming:
 
-BARRIER.PY: THIS CODE SIMULATES A RACE BETWEEN THREE RUNNERS USING THREADS AND A BARRIER TO SYNCHRONIZE THEIR ARRIVAL AT THE FINISH LINE.
+- **Multiprocessing:** Using Python’s `multiprocessing` module to spawn multiple processes.
+- **Multithreading:** Using Python’s `threading` module to spawn multiple threads.
 
-CONDITION.PY: THIS CODE IMPLEMENTS A PRODUCER-CONSUMER PROBLEM USING THREADING AND A CONDITION VARIABLE TO SYNCHRONIZE THE PRODUCER AND CONSUMER THREADS. THE PRODUCER ADDS ITEMS TO A SHARED LIST, AND THE CONSUMER REMOVES ITEMS, WAITING IF THERE ARE NO ITEMS TO CONSUME AND NOTIFYING WHEN AN ITEM IS PRODUCED OR CONSUMED.
+It measures and compares execution times for both techniques using a basic list processing task.
 
-EVENT.PY: THIS CODE IMPLEMENTS A SIMPLE PRODUCER-CONSUMER PROBLEM USING THREADING AND AN EVENT TO SYNCHRONIZE THE PRODUCER AND CONSUMER THREADS. THE PRODUCER THREAD APPENDS RANDOM ITEMS TO A SHARED LIST AND NOTIFIES THE CONSUMER THREAD, WHICH POPS ITEMS FROM THE LIST. THE EVENT IS USED TO CONTROL THE FLOW BETWEEN PRODUCER AND CONSUMER, MAKING SURE THE CONSUMER ONLY CONSUMES WHEN ITEMS ARE AVAILABLE.
+---
 
-MYTHREADCLASS.PY: THIS CODE CREATES AND RUNS 9 THREADS USING THE Thread CLASS FROM THE threading MODULE. EACH THREAD HAS A RANDOM DURATION (BETWEEN 1 AND 10 SECONDS) FOR WHICH IT SLEEPS, SIMULATING A TASK. THE THREADS PRINT MESSAGES WHEN THEY BEGIN AND END, INCLUDING THE PROCESS ID. THE join() METHOD IS USED TO ENSURE THAT THE MAIN THREAD WAITS FOR ALL THREADS TO FINISH BEFORE PRINTING "End" AND DISPLAYING THE EXECUTION TIME.
+### **7. gpu_computation.py**
+Demonstrates how to leverage GPU for parallel computing using Numba's CUDA JIT compiler:
 
-MYTHREADCLASS_LOCK.PY: THIS CODE CREATES AND RUNS 9 THREADS WITH A LOCK MECHANISM TO ENSURE THAT ONLY ONE THREAD CAN EXECUTE ITS CRITICAL SECTION (THE PART WHERE IT PRINTS MESSAGES AND SLEEPS) AT A TIME. THE threadLock.acquire() CALL ENSURES THAT ONLY ONE THREAD ENTERS THE CRITICAL SECTION AT ONCE, AND THE threadLock.release() CALL RELEASES THE LOCK AFTER THE THREAD HAS COMPLETED ITS TASK. THE THREADS PRINT MESSAGES WHEN THEY BEGIN AND END, INCLUDING THE PROCESS ID, AND THE MAIN THREAD WAITS FOR ALL THREADS TO FINISH BEFORE DISPLAYING "End" AND THE EXECUTION TIME.
+- **Vector addition** using GPU for accelerated computation.
+- **Verifying the result** using Numba’s CUDA capabilities.
 
-MYTHREADCLASS_LOCK2.PY: THREADS SIMULATE RANDOM DURATIONS WHILE ENSURING MUTUAL EXCLUSION USING A LOCK FOR PRINTING MESSAGES.
+---
 
-RLOCK.PY: THIS CODE DEMONSTRATES THE USE OF THREADS AND REENTRANT LOCKS TO ADD AND REMOVE ITEMS FROM A SHARED BOX CONCURRENTLY.
+### **8. num_parallel_computing.py**
+This script demonstrates vector addition using data parallelism with NumPy:
 
-SEMAPHORE.PY: THIS CODE DEMONSTRATES THE USE OF SEMAPHORES TO SYNCHRONIZE THE PRODUCER AND CONSUMER THREADS, WHERE THE PRODUCER GENERATES AN ITEM AND THE CONSUMER CONSUMES IT.
+- **Simple vector addition** to compute the result using NumPy's optimized parallelism.
+- Measures and prints execution time for large vector sizes.
 
-THREADDEFINITON.PY: THIS CODE CREATES AND STARTS 10 THREADS, EACH CALLING THE my_func FUNCTION WITH A UNIQUE THREAD NUMBER.
+---
 
-THREAD_DETERMINE.PY: THIS CODE CREATES THREE THREADS, EACH EXECUTING A DIFFERENT FUNCTION (function_A, function_B, function_C) AND PRINTING MESSAGES BEFORE AND AFTER SLEEPING FOR 2 SECONDS.
+### **9. threadpool_executor.py**
+Illustrates the use of `ThreadPoolExecutor` to manage a pool of threads for concurrent execution of tasks:
 
-THREAD_NAME_AND_PROCESSES.PY: THIS CODE CREATES TWO THREADS (Thread#1 AND Thread#2), EACH PRINTING THE THREAD NAME AND PROCESS ID, AND THEN JOINS THEM TO WAIT FOR THEIR COMPLETION BEFORE PRINTING "END".
+- **Executing multiple tasks** in parallel with a thread pool.
+- Uses `ThreadPoolExecutor` to run functions asynchronously.
 
-THREADING_WITH_QUEUE.PY: THIS CODE DEMONSTRATES THREAD SYNCHRONIZATION USING A QUEUE, WHERE A PRODUCER THREAD APPENDS RANDOM ITEMS TO THE QUEUE AND MULTIPLE CONSUMER THREADS POP ITEMS FROM THE QUEUE TO PROCESS THEM.
+---
 
-REQUIREMENTS:
+### **10. producer_consumer.py**
+This script demonstrates the producer-consumer problem using multiprocessing:
+
+- **Two processes**, producer and consumer, communicate via a Queue.
+- The producer produces items, and the consumer consumes them.
+
+---
+
+### **11. semaphore_example.py**
+This script demonstrates how to use a semaphore to control access to a shared resource with threading:
+
+- Controls access to a resource by limiting the number of concurrent threads that can access it.
+
+---
+
+### **12. multiprocessing_example.py**
+Demonstrates multiprocessing with basic process spawning:
+
+- Executes two functions (**print square** and **print cube**) in parallel using separate processes.
+- Shows process synchronization and joining.
+
+---
+
+### **13. fibonacci_threading.py**
+Illustrates using multiple threads to calculate Fibonacci numbers:
+
+- Uses threading to calculate Fibonacci numbers concurrently.
+
+---
+
+### **14. threading_event_example.py**
+Demonstrates threading events for communication between threads:
+
+- Producer creates random numbers, and consumer consumes them using an event to synchronize operations.
+
+---
+
+### **15. lock_example.py**
+Shows how to use thread locks for synchronization in multithreading:
+
+- Locks prevent race conditions by ensuring only one thread can access a shared resource at a time.
+
+---
+
+## **Requirements**
 To run these scripts, you need Python 3.x and some external libraries:
 
-mpi4py for MPI examples
-numba and numpy for GPU computing examples
-concurrent.futures for ThreadPoolExecutor
-multiprocessing and threading for concurrent and parallel programming examples
+- `mpi4py` for MPI examples
+- `numba` and `numpy` for GPU computing examples
+- `concurrent.futures` for `ThreadPoolExecutor`
+- `multiprocessing` and `threading` for concurrent and parallel programming examples
+
+You can install the required libraries using:
+
+```bash
+pip install mpi4py numba numpy
+```
