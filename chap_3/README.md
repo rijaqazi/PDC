@@ -1,6 +1,6 @@
 ### *Chapter 3: Multiprocessing - README.md*
 
-# Chapter 3: Multiprocessing
+## Chapter 3: Multiprocessing
 
 This chapter demonstrates the use of Python's *multiprocessing* module for parallel processing. It explores how to manage processes, exchange data between them, and synchronize operations efficiently.
 
