@@ -1,139 +1,62 @@
+# Parallel and Distributed Computing with Python
 
-# **Basic Python Codes**
-This repository contains basic Python programs designed to demonstrate fundamental programming concepts and advanced techniques like parallel computing, threading, multiprocessing, and GPU computing. Each file highlights specific concepts and functionalities relevant to beginner and intermediate Python programmers.
+This repository contains a comprehensive guide and collection of Python code examples for parallel and distributed computing. The repository covers various parallel computing techniques, ranging from thread-based parallelism to distributed computing, with examples and full programming demonstrations. The following chapters outline the topics covered in this repository.
 
-## **Contents**
+## Table of Contents
 
-### **1. calculator.py**
-A simple calculator program that performs basic arithmetic operations (addition, subtraction, multiplication, and division). Users can input two numbers and choose the desired operation.
+- [Overview](#overview)
+- [Chapters](#chapters)
+- [Technologies Used](#technologies-used)
+- [Demonstrations and Techniques](#demonstrations-and-techniques)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
----
+## Overview
 
-### **2. data_structures.py**
-This file demonstrates the use of various data structures in Python, including:
+Parallel and distributed computing are essential for solving complex computational problems by executing tasks concurrently, thereby reducing processing time and enhancing performance. This repository is designed to introduce and demonstrate various techniques for parallel computing using Python.
 
-- **Tuples**
-- **Lists**
-- **Dictionaries**
+The content is structured in chapters, each focusing on a different approach to parallel programming in Python.
 
-Examples and explanations are provided to help understand how to use these data structures effectively.
+## Chapters
 
----
+### Chapter 1: Getting Started with Parallel Computing and Python
+This chapter provides an overview of parallel programming architectures and programming models. It introduces the Python programming language and highlights its features, such as its ease of use, extensibility, and the rich set of libraries and applications available. Python is an ideal tool for parallel computing due to its versatility and ease of learning.
 
-### **3. functions.py**
-This script showcases how to define and use functions in Python. It includes examples of:
+### Chapter 2: Thread-Based Parallelism
+This chapter discusses thread parallelism using Python’s threading module. You will learn how to create and manage threads, synchronize them, and implement multithreading applications through comprehensive programming examples.
 
-- **Defining functions**
-- **Function parameters and return values**
-- **Calling functions**
+### Chapter 3: Process-Based Parallelism
+This chapter focuses on process-based parallelism, utilizing Python’s multiprocessing module. It provides complete examples that demonstrate how to parallelize tasks using multiple processes to enhance performance.
 
----
+### Chapter 4: Message Passing
+This chapter covers message-passing communication systems. The focus is on the mpi4py library, which enables message-passing programming for distributed computing. Numerous examples are provided to demonstrate how message passing can be used for inter-process communication across multiple nodes.
 
-### **4. classes.py**
-This file introduces object-oriented programming (OOP) in Python. It covers:
+### Chapter 5: Asynchronous Programming
+Asynchronous programming simplifies concurrent execution by allowing tasks to explicitly relinquish control rather than being suspended. This chapter explains how asynchronous programming works and introduces Python’s asyncio module. Through examples, you will learn how to manage asynchronous tasks, providing efficient execution for I/O-bound tasks.
 
-- **Creating classes and objects**
-- **Defining methods**
-- **Using inheritance**
+## Technologies Used
 
----
+- Python 3.x
+- threading module
+- multiprocessing module
+- concurrent.futures
+- asyncio
+- mpi4py (Message Passing Interface for Python)
+- dask (for distributed computing)
 
-### **5. mpi_example.py**
-This script demonstrates how to use MPI (Message Passing Interface) for distributed computing with `mpi4py`. It shows basic communication between processes:
+## Demonstrations and Techniques
 
-- **Sending and receiving data using MPI**
-- **Handling process ranks and sizes**
+Each chapter is backed by practical Python examples that demonstrate real-world applications of the discussed techniques.
 
----
+- *Thread-Based Parallelism*: Demonstrates thread creation, synchronization, and task division using Python's threading module.
+- *Process-Based Parallelism*: Shows how to use multiprocessing to parallelize CPU-bound tasks.
+- *Message Passing*: Provides examples of message-passing using mpi4py for distributed computing.
+- *Asynchronous Programming*: Explains how to handle I/O-bound tasks using Python's asyncio for efficient asynchronous execution.
 
-### **6. multiprocessing_vs_threading.py**
-This script compares multiprocessing and threading for concurrent programming:
+## Setup and Installation
 
-- **Multiprocessing:** Using Python’s `multiprocessing` module to spawn multiple processes.
-- **Multithreading:** Using Python’s `threading` module to spawn multiple threads.
-
-It measures and compares execution times for both techniques using a basic list processing task.
-
----
-
-### **7. gpu_computation.py**
-Demonstrates how to leverage GPU for parallel computing using Numba's CUDA JIT compiler:
-
-- **Vector addition** using GPU for accelerated computation.
-- **Verifying the result** using Numba’s CUDA capabilities.
-
----
-
-### **8. num_parallel_computing.py**
-This script demonstrates vector addition using data parallelism with NumPy:
-
-- **Simple vector addition** to compute the result using NumPy's optimized parallelism.
-- Measures and prints execution time for large vector sizes.
-
----
-
-### **9. threadpool_executor.py**
-Illustrates the use of `ThreadPoolExecutor` to manage a pool of threads for concurrent execution of tasks:
-
-- **Executing multiple tasks** in parallel with a thread pool.
-- Uses `ThreadPoolExecutor` to run functions asynchronously.
-
----
-
-### **10. producer_consumer.py**
-This script demonstrates the producer-consumer problem using multiprocessing:
-
-- **Two processes**, producer and consumer, communicate via a Queue.
-- The producer produces items, and the consumer consumes them.
-
----
-
-### **11. semaphore_example.py**
-This script demonstrates how to use a semaphore to control access to a shared resource with threading:
-
-- Controls access to a resource by limiting the number of concurrent threads that can access it.
-
----
-
-### **12. multiprocessing_example.py**
-Demonstrates multiprocessing with basic process spawning:
-
-- Executes two functions (**print square** and **print cube**) in parallel using separate processes.
-- Shows process synchronization and joining.
-
----
-
-### **13. fibonacci_threading.py**
-Illustrates using multiple threads to calculate Fibonacci numbers:
-
-- Uses threading to calculate Fibonacci numbers concurrently.
-
----
-
-### **14. threading_event_example.py**
-Demonstrates threading events for communication between threads:
-
-- Producer creates random numbers, and consumer consumes them using an event to synchronize operations.
-
----
-
-### **15. lock_example.py**
-Shows how to use thread locks for synchronization in multithreading:
-
-- Locks prevent race conditions by ensuring only one thread can access a shared resource at a time.
-
----
-
-## **Requirements**
-To run these scripts, you need Python 3.x and some external libraries:
-
-- `mpi4py` for MPI examples
-- `numba` and `numpy` for GPU computing examples
-- `concurrent.futures` for `ThreadPoolExecutor`
-- `multiprocessing` and `threading` for concurrent and parallel programming examples
-
-You can install the required libraries using:
-
-```bash
-pip install mpi4py numba numpy
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/rijaqazi/PDC
