@@ -5,8 +5,7 @@
 This chapter demonstrates the use of Python's *multiprocessing* module for parallel processing. It explores how to manage processes, exchange data between them, and synchronize operations efficiently.
 
 ## Project Breakdown
-- *communicating_with_pipe.py*: Demonstrates inter-process communication using pipes.
-  ![image](https://github.com/user-attachments/assets/e3830c52-7086-4d73-8579-062e26d4549b)
+- *communicating_with_pipe.py*: Demonstrates inter-process communication using pipes. ![image](https://github.com/user-attachments/assets/e3830c52-7086-4d73-8579-062e26d4549b)
 
 - *communicating_with_queue.py*: Showcases communication between processes using queues.
   ![image](https://github.com/user-attachments/assets/fa039243-9156-4482-a4fb-049ae9fd8a60)
