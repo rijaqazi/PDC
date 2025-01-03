@@ -12,6 +12,7 @@ Multiplication
 Division
 
 This example demonstrates how to take user input and perform calculations based on the selected operation.
+
 ![image](https://github.com/user-attachments/assets/6ef08c6b-b087-4891-b3d1-e8b4ae3788da)
 
 ## Code 2: Dictionary Example
